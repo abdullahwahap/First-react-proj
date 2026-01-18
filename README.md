@@ -1,16 +1,87 @@
-# React + Vite
+# 📚 Book Management Application
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A modern, responsive React application designed to help users manage their personal library.  
+This app allows you to add, edit, delete, search, and sort books with persistent data storage.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## ✨ Features
 
-## React Compiler
+- **Full CRUD Functionality**  
+  Create, Read, Update, and Delete books seamlessly.
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+- **Persistent Storage**  
+  Uses `localStorage` to ensure your book list is saved even after refreshing the browser.
 
-## Expanding the ESLint configuration
+- **Advanced Filtering & Sorting**
+  - 🔍 **Search**: Real-time search by book name
+  - 🔃 **Sort**: By Name, Author, Release Year, or Date Added
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+- **State Management**  
+  Built using **React Context API** to avoid prop drilling and keep the code scalable.
+
+- **Responsive UI**  
+  Styled with **Tailwind CSS**, including custom themes and smooth transitions.
+
+- **Form Validation**  
+  Basic checks to ensure all book details are provided before saving.
+
+---
+
+## 🛠️ Tech Stack
+
+- **Frontend**: React.js (Functional Components & Hooks)
+- **Styling**: Tailwind CSS
+- **State Management**: Context API
+- **Build Tool**: Vite
+
+---
+
+## 🚀 Getting Started
+
+Follow these steps to get a local copy up and running:
+
+### 1️⃣ Clone the repository
+```bash
+git clone https://github.com/your-username/book-management-app.git
+```
+
+### 2️⃣ Install dependencies
+```
+cd book-management-app
+npm install
+```
+### 3️⃣ Run the application
+```
+npm run dev
+```
+
+The app will typically be available at:
+👉 http://localhost:5173
+
+📂 Project Structure
+src/
+├── components/
+│   ├── BookForm.jsx      # Handles adding and editing book details
+│   ├── BooksList.jsx     # Search, sort logic, and list rendering
+│   └── BookItem.jsx      # UI component for individual book cards
+├── App.jsx               # Main logic, State Provider, and layout
+├── App.css               # Custom Tailwind layers and theme configuration
+└── index.css             # Global styles
+
+⚙️ Key Functionalities
+
+Context API
+BookContext in App.jsx centralizes the book state and exposes functions like
+resetBook and setEditingId globally.
+
+Performance Optimization
+Uses useMemo in BooksList.jsx to optimize searching and sorting for large lists.
+
+User Experience Enhancements
+
+Smooth hover animations
+
+Automatic scrolling (window.scrollTo) when editing a book
+
+## ScreenShots (./ScreenShoots/*.png)
