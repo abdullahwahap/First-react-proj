@@ -1,0 +1,32 @@
+@import 'tailwindcss';
+
+@theme {
+    --color-primary: #1eef33
+}
+
+@layer components {
+    .btn {
+        @apply transition duration-300 ease-in-out hover:scale-110 hover:opacity-80 cursor-pointer rounded-md text-white font-bold w-[10vw] text-center py-1 px-2
+        sm:px-2 sm:py-3 shadow-md text-sm sm:text-base;
+    }
+    input[type='text'] {
+        @apply border border-gray-300 rounded-lg px-3 py-2
+        focus:outline-none focus:ring-2 focus:ring-primary;
+    }
+    input[type='number'] {
+        @apply border border-gray-500 rounded-lg px-3 py-2
+        focus:outline-none focus:ring-2 focus:ring-primary;
+    }
+    form .form-group {
+        @apply flex ml-[10px] gap-4 p-2 border-2 border-gray-400 rounded-lg items-center mb-4;
+    }
+    form .form-group label {
+        @apply text-[1.25rem] font-bold text-gray-700 w-[150px]
+    }
+    li {
+        @apply border-2 border-gray-700 rounded-lg mb-4 p-4
+    }
+    li *:not(:last-child) {
+        @apply border-b border-black
+    }
+}
