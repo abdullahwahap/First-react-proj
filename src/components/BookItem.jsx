@@ -1,6 +1,6 @@
 const BookItem = ({book, onDelete, onEdit}) => {
     const dateAdded = new Date(book.time).toLocaleString()
-    const {name, author, year} = book
+    const {name, author, year} = book    
     return (
     <li className='flex flex-col gap-3 bg-amber-100/50 w-[60%] mx-auto text-center rounded-2xl p-2'> 
         <h3 className='text-2xl p-1 font-bold text-gray-700'>Name: {name}</h3> 

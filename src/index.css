@@ -7,7 +7,7 @@
 @layer components {
     .btn {
         @apply transition duration-300 ease-in-out hover:scale-110 hover:opacity-80 cursor-pointer rounded-md text-white font-bold w-[10vw] text-center py-1 px-2
-        sm:px-2 sm:py-3 shadow-md text-sm sm:text-base;
+        sm:px-2 sm:py-3 shadow-md text-[min(2vw,14px)] sm:text-base ;
     }
     input[type='text'] {
         @apply border border-gray-300 rounded-lg px-3 py-2
